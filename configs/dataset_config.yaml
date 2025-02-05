@@ -1,0 +1,30 @@
+# Dataset Configuration
+dataset:
+  train:
+    path: 'data/train/'
+    annotation_file: 'data/train_annotations.csv'
+    batch_size: 32
+    shuffle: true
+  val:
+    path: 'data/val/'
+    annotation_file: 'data/val_annotations.csv'
+    batch_size: 32
+    shuffle: false
+  test:
+    path: 'data/test/'
+    annotation_file: 'data/test_annotations.csv'
+    batch_size: 1
+    shuffle: false
+
+# Data Preprocessing
+preprocessing:
+  image_size: [224, 224]
+  normalize:
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+
+# Data Augmentation
+augmentation:
+  horizontal_flip: true
+  random_crop: true
+  rotation: 10
